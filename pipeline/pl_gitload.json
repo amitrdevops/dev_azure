@@ -29,7 +29,8 @@
 					"dataset": {
 						"referenceName": "ds_param",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
