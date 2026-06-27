@@ -1,0 +1,15 @@
+{
+	"name": "amitrazadf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d9025831-c4f9-4fc6-9dd3-671779a881f6",
+		"tenantId": "57827426-90db-4392-9741-0031b13d5de7"
+	}
+}
