@@ -1,0 +1,133 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "amitrazadf"
+		},
+		"ls_calendar_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_calendar'"
+		},
+		"ls_customer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_customer'"
+		},
+		"ls_github_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_github'"
+		},
+		"ls_param_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_param'"
+		},
+		"ls_product_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_product'"
+		},
+		"ls_product_categories_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_product_categories'"
+		},
+		"ls_product_subcategories_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_product_subcategories'"
+		},
+		"ls_returns_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_returns'"
+		},
+		"ls_sales_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sales'"
+		},
+		"ls_sink_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sink'"
+		},
+		"ls_territories_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_territories'"
+		},
+		"ls_github_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
+		"ls_github_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "amitrdevops"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "amitrazadf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_calendar_connectionString": {
+						"value": "[parameters('ls_calendar_connectionString')]"
+					},
+					"ls_customer_connectionString": {
+						"value": "[parameters('ls_customer_connectionString')]"
+					},
+					"ls_github_password": {
+						"value": "[parameters('ls_github_password')]"
+					},
+					"ls_param_connectionString": {
+						"value": "[parameters('ls_param_connectionString')]"
+					},
+					"ls_product_connectionString": {
+						"value": "[parameters('ls_product_connectionString')]"
+					},
+					"ls_product_categories_connectionString": {
+						"value": "[parameters('ls_product_categories_connectionString')]"
+					},
+					"ls_product_subcategories_connectionString": {
+						"value": "[parameters('ls_product_subcategories_connectionString')]"
+					},
+					"ls_returns_connectionString": {
+						"value": "[parameters('ls_returns_connectionString')]"
+					},
+					"ls_sales_connectionString": {
+						"value": "[parameters('ls_sales_connectionString')]"
+					},
+					"ls_sink_connectionString": {
+						"value": "[parameters('ls_sink_connectionString')]"
+					},
+					"ls_territories_connectionString": {
+						"value": "[parameters('ls_territories_connectionString')]"
+					},
+					"ls_github_properties_typeProperties_url": {
+						"value": "[parameters('ls_github_properties_typeProperties_url')]"
+					},
+					"ls_github_properties_typeProperties_userName": {
+						"value": "[parameters('ls_github_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
