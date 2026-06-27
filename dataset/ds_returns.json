@@ -1,0 +1,41 @@
+{
+	"name": "ds_returns",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_returns",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "AdventureWorks_Returns.csv",
+				"folderPath": "returns",
+				"container": "raw-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ReturnDate",
+				"type": "String"
+			},
+			{
+				"name": "TerritoryKey",
+				"type": "String"
+			},
+			{
+				"name": "ProductKey",
+				"type": "String"
+			},
+			{
+				"name": "ReturnQuantity",
+				"type": "String"
+			}
+		]
+	}
+}

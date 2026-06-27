@@ -1,0 +1,33 @@
+{
+	"name": "ds_product_categories",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_product_categories",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "AdventureWorks_Product_Categories.csv",
+				"folderPath": "product_categories",
+				"container": "raw-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ProductCategoryKey",
+				"type": "String"
+			},
+			{
+				"name": "CategoryName",
+				"type": "String"
+			}
+		]
+	}
+}
