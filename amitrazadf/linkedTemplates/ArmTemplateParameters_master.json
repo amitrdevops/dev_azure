@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "amitrazadf"
+		},
+		"ls_calendar_connectionString": {
+			"value": ""
+		},
+		"ls_customer_connectionString": {
+			"value": ""
+		},
+		"ls_github_password": {
+			"value": ""
+		},
+		"ls_param_connectionString": {
+			"value": ""
+		},
+		"ls_product_connectionString": {
+			"value": ""
+		},
+		"ls_product_categories_connectionString": {
+			"value": ""
+		},
+		"ls_product_subcategories_connectionString": {
+			"value": ""
+		},
+		"ls_returns_connectionString": {
+			"value": ""
+		},
+		"ls_sales_connectionString": {
+			"value": ""
+		},
+		"ls_sink_connectionString": {
+			"value": ""
+		},
+		"ls_territories_connectionString": {
+			"value": ""
+		},
+		"ls_github_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"ls_github_properties_typeProperties_userName": {
+			"value": "amitrdevops"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
